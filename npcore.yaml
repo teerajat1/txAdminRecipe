@@ -1,0 +1,520 @@
+name: NPCore Framework Build
+version: 1.0.0
+author: NPCore Collective
+description: Complete NoPixel Inspired RP Server For FiveM!
+
+tasks:
+  # Server CFG & Brand
+
+  - action: download_github
+    src: https://github.com/npcore-framework/txAdminRecipe
+    ref: main
+    dest: ./tmp/npcore
+    
+  - action: move_path
+    src: ./tmp/npcore/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/npcore/NPCore.png
+    dest: ./NPCore.png
+
+  # FiveM Resources
+
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[fivem]
+
+  # Standalone
+  - action: ensure_dir
+    path: ./resources/[standalone]
+
+  - action: download_file
+    path: ./tmp/files/ghmattimysql.zip
+    url: https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip
+
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ghmattimysql.zip
+
+  - action: download_github
+    dest: ./resources/[standalone]/bob74_ipl
+    ref: master
+    src: https://github.com/Bob74/bob74_ipl
+
+  - action: download_github
+    dest: ./resources/[standalone]/connectqueue
+    ref: master
+    src: https://github.com/npcore-framework/connectqueue
+
+  - action: download_github
+    dest: ./resources/[standalone]/pma-voice
+    ref: master
+    src: https://github.com/npcore-framework/pma-voice
+
+  # NPC Directory
+
+  - action: ensure_dir
+    path: ./resources/[npc]
+
+  # NPC Github Scripts
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-scripts
+    ref: main
+    src: https://github.com/npcore-framework/npc-scripts
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-core
+    ref: main
+    src: https://github.com/npcore-framework/npc-core
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-login
+    ref: main
+    src: https://github.com/npcore-framework/npc-login
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-mdt
+    ref: main
+    src: https://github.com/npcore-framework/npc-mdt
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-admin
+    ref: main
+    src: https://github.com/npcore-framework/npc-admin
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-menu
+    ref: main
+    src: https://github.com/npcore-framework/npc-menu
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-infinity
+    ref: main
+    src: https://github.com/npcore-framework/npc-infinity
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-outfits
+    ref: main
+    src: https://github.com/npcore-framework/npc-outfits
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-banking
+    ref: main
+    src: https://github.com/npcore-framework/npc-banking
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-postalmap
+    ref: main
+    src: https://github.com/npcore-framework/npc-postalmap
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-mapdata
+    ref: main
+    src: https://github.com/npcore-framework/npc-mapdata
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-polyzone
+    ref: main
+    src: https://github.com/npcore-framework/npc-polyzone
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-warmenu
+    ref: main
+    src: https://github.com/npcore-framework/npc-warmenu
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-actionbar
+    ref: main
+    src: https://github.com/npcore-framework/npc-actionbar
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-apartments
+    ref: main
+    src: https://github.com/npcore-framework/npc-apartments
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-applications
+    ref: main
+    src: https://github.com/npcore-framework/npc-applications
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-loading-screen
+    ref: main
+    src: https://github.com/npcore-framework/npc-loading-screen
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-weather-sync
+    ref: main
+    src: https://github.com/npcore-framework/npc-weather-sync
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-weather-seasons
+    ref: main
+    src: https://github.com/npcore-framework/npc-weather-seasons
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-weather-seasons
+    ref: main
+    src: https://github.com/npcore-framework/npc-weather-seasons
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-vehicleshop
+    ref: main
+    src: https://github.com/npcore-framework/npc-vehicleshop
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-fx
+    ref: main
+    src: https://github.com/npcore-framework/npc-fx
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-ui
+    ref: main
+    src: https://github.com/npcore-framework/npc-ui
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-log
+    ref: main
+    src: https://github.com/npcore-framework/npc-log
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-cid
+    ref: main
+    src: https://github.com/npcore-framework/npc-cid
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-keys
+    ref: main
+    src: https://github.com/npcore-framework/npc-keys
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-news
+    ref: main
+    src: https://github.com/npcore-framework/npc-news
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-eblips
+    ref: main
+    src: https://github.com/npcore-framework/npc-eblips
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-vehicles
+    ref: main
+    src: https://github.com/npcore-framework/npc-vehicles
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-vehicledebug
+    ref: main
+    src: https://github.com/npcore-framework/npc-vehicledebug
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-vehiclecontrol
+    ref: main
+    src: https://github.com/npcore-framework/npc-vehiclecontrol
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-tunershop
+    ref: main
+    src: https://github.com/npcore-framework/npc-tunershop
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-tuner
+    ref: main
+    src: https://github.com/npcore-framework/npc-tuner
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-thermite
+    ref: main
+    src: https://github.com/npcore-framework/npc-thermite
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-territories
+    ref: main
+    src: https://github.com/npcore-framework/npc-territories
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-tasknotify
+    ref: main
+    src: https://github.com/npcore-framework/npc-tasknotify
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-taskbarthreat
+    ref: main
+    src: https://github.com/npcore-framework/npc-taskbarthreat
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-taskbarskill
+    ref: main
+    src: https://github.com/npcore-framework/npc-taskbarskill
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-taskbar
+    ref: main
+    src: https://github.com/npcore-framework/npc-taskbar
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-target
+    ref: main
+    src: https://github.com/npcore-framework/npc-target
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-tacoshop
+    ref: main
+    src: https://github.com/npcore-framework/npc-tacoshop
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-stash
+    ref: main
+    src: https://github.com/npcore-framework/npc-stash
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-spawnveh
+    ref: main
+    src: https://github.com/npcore-framework/npc-spawnveh
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-shops
+    ref: main
+    src: https://github.com/npcore-framework/npc-shops
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-securityheists
+    ref: main
+    src: https://github.com/npcore-framework/npc-securityheists
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-secondaryjobs
+    ref: main
+    src: https://github.com/npcore-framework/npc-secondaryjobs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-robbery
+    ref: main
+    src: https://github.com/npcore-framework/npc-robbery
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-emergencyjobs
+    ref: main
+    src: https://github.com/npcore-framework/npc-emergencyjobs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-recoil
+    ref: main
+    src: https://github.com/npcore-framework/npc-recoil
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-carmenu
+    ref: main
+    src: https://github.com/npcore-framework/npc-carmenu
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-bennys
+    ref: main
+    src: https://github.com/npcore-framework/npc-bennys
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-radio
+    ref: main
+    src: https://github.com/npcore-framework/npc-radio
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-phone
+    ref: main
+    src: https://github.com/npcore-framework/npc-phone
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-police
+    ref: main
+    src: https://github.com/npcore-framework/npc-police
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-hud
+    ref: main
+    src: https://github.com/npcore-framework/npc-hud
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-hospital
+    ref: main
+    src: https://github.com/npcore-framework/npc-hospital
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-deathmanager
+    ref: main
+    src: https://github.com/npcore-framework/npc-deathmanager
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-evidence
+    ref: main
+    src: https://github.com/npcore-framework/npc-evidence
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-notepad
+    ref: main
+    src: https://github.com/npcore-framework/npc-notepad
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-mhacking
+    ref: main
+    src: https://github.com/npcore-framework/npc-mhacking
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-mechanic
+    ref: main
+    src: https://github.com/npcore-framework/npc-mechanic
+	
+  - action: download_github
+    dest: ./resources/[npc]/npc-lockpicking
+    ref: main
+    src: https://github.com/npcore-framework/npc-lockpicking
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-keypad
+    ref: main
+    src: https://github.com/npcore-framework/npc-keypad
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-keybinds
+    ref: main
+    src: https://github.com/npcore-framework/npc-keybinds
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-jobsystem
+    ref: main
+    src: https://github.com/npcore-framework/npc-jobsystem
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-jobs
+    ref: main
+    src: https://github.com/npcore-framework/npc-jobs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-jobmanager
+    ref: main
+    src: https://github.com/npcore-framework/npc-jobmanager
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-jewelrobbery
+    ref: main
+    src: https://github.com/npcore-framework/npc-jewelrobbery
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-jailsystem
+    ref: main
+    src: https://github.com/npcore-framework/npc-jailsystem
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-inventory
+    ref: main
+    src: https://github.com/npcore-framework/npc-inventory
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-interior
+    ref: main
+    src: https://github.com/npcore-framework/npc-interior
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-interact-sound
+    ref: main
+    src: https://github.com/npcore-framework/npc-interact-sound
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-hunting
+    ref: main
+    src: https://github.com/npcore-framework/npc-hunting
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-garages
+    ref: main
+    src: https://github.com/npcore-framework/npc-garages
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-gangs
+    ref: main
+    src: https://github.com/npcore-framework/npc-gangs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-furniture
+    ref: main
+    src: https://github.com/npcore-framework/npc-furniture
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-fuel-stations
+    ref: main
+    src: https://github.com/npcore-framework/npc-fuel-stations
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-evidence
+    ref: main
+    src: https://github.com/npcore-framework/npc-evidence
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-ems
+    ref: main
+    src: https://github.com/npcore-framework/npc-ems
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-emotes
+    ref: main
+    src: https://github.com/npcore-framework/npc-emotes
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-emergencyjobs
+    ref: main
+    src: https://github.com/npcore-framework/npc-emergencyjobs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-drugs
+    ref: main
+    src: https://github.com/npcore-framework/npc-drugs
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-drugdeliveries
+    ref: main
+    src: https://github.com/npcore-framework/npc-drugdeliveries
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-doors
+    ref: main
+    src: https://github.com/npcore-framework/npc-doors
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-dispatch
+    ref: main
+    src: https://github.com/npcore-framework/npc-dispatch
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-blindfold
+    ref: main
+    src: https://github.com/npcore-framework/npc-blindfold
+	
+  - action: download_github
+    dest: ./resources/[npc]/npc-burglary
+    ref: main
+    src: https://github.com/npcore-framework/npc-burglary
+	
+  - action: download_github
+    dest: ./resources/[npc]/npc-casino
+    ref: main
+    src: https://github.com/npcore-framework/npc-casino
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-commands
+    ref: main
+    src: https://github.com/npcore-framework/npc-commands
+
+  - action: download_github
+    dest: ./resources/[npc]/npc-context
+    ref: main
+    src: https://github.com/npcore-framework/npc-context
+
+  # Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/npccore/npcore.sql
+
+  # Remove Temp Path
+  - action: remove_path
+    path: ./tmp
