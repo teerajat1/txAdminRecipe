@@ -44,6 +44,11 @@ tasks:
     src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
+    dest: ./resources/[standalone]/isPed
+    ref: main
+    src: https://github.com/npcore-framework/isPed
+
+  - action: download_github
     dest: ./resources/[standalone]/connectqueue
     ref: main
     src: https://github.com/npcore-framework/connectqueue
