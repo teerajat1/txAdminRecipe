@@ -498,7 +498,7 @@ tasks:
   # Database
   - action: connect_database
   - action: query_database
-    file: ./tmp/npccore/npcore.sql
+    file: ./tmp/npccore/npcore-server.sql
 
   # Remove Temp Path
   - action: remove_path
