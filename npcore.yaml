@@ -156,11 +156,6 @@ tasks:
     src: https://github.com/npcore-framework/npc-weather-seasons
 
   - action: download_github
-    dest: ./resources/[npc]/npc-weather-seasons
-    ref: main
-    src: https://github.com/npcore-framework/npc-weather-seasons
-
-  - action: download_github
     dest: ./resources/[npc]/npc-vehicleshop
     ref: main
     src: https://github.com/npcore-framework/npc-vehicleshop
