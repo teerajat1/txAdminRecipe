@@ -451,11 +451,6 @@ tasks:
     src: https://github.com/npcore-framework/npc-emotes
 
   - action: download_github
-    dest: ./resources/[npc]/npc-emergencyjobs
-    ref: main
-    src: https://github.com/npcore-framework/npc-emergencyjobs
-
-  - action: download_github
     dest: ./resources/[npc]/npc-drugs
     ref: main
     src: https://github.com/npcore-framework/npc-drugs
