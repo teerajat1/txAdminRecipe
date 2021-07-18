@@ -11,7 +11,7 @@ Open folder from step 1 and double click FXServer.exe which will then prompt you
 ![image](https://cdn.discordapp.com/attachments/860905633783480330/860984804840439808/NPCore_Deployment_Type.png)
 # YAML URL: ⤵️
 https://raw.githubusercontent.com/npcore-framework/txAdminRecipe/main/npcore.yaml
-![image](https://cdn.discordapp.com/attachments/860905633783480330/866212667658993665/NPCore_YAML_URL.png)
+![image](https://cdn.discordapp.com/attachments/860905633783480330/866215425695940608/NPCore_YAML_URL.png)
 
 #  STEP: :four:
 On servers first start up, let webpack and yarn run through until complete. Change the name of your database from root to something else and then generate a password and change that information in the server.cfg. Restart server, join, enjoy!
@@ -23,3 +23,4 @@ Evolve, Network, & Manifest.
 The FiveM 🐌 NPCore Collective.
 • © 2021 | NPCore Framework •
 ```
+
