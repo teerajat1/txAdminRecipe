@@ -51,6 +51,16 @@ tasks:
     dest: ./resources/[standalone]/isPed
     ref: main
     src: https://github.com/npcore-framework/isPed
+	
+  - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: main
+    src: https://github.com/npcore-framework/PolyZone
+	
+  - action: download_github
+    dest: ./resources/[standalone]/dlciplloader
+    ref: main
+    src: https://github.com/npcore-framework/dlciplloader
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
