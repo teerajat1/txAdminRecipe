@@ -40,7 +40,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
-    ref: main
+    ref: master
     src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
