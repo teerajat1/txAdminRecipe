@@ -441,11 +441,6 @@ tasks:
     src: https://github.com/npcore-framework/npc-fuel-stations
 
   - action: download_github
-    dest: ./resources/[npc]/npc-evidence
-    ref: main
-    src: https://github.com/npcore-framework/npc-evidence
-
-  - action: download_github
     dest: ./resources/[npc]/npc-ems
     ref: main
     src: https://github.com/npcore-framework/npc-ems
