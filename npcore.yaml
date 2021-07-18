@@ -10,10 +10,14 @@ tasks:
     src: https://github.com/npcore-framework/txAdminRecipe
     ref: main
     dest: ./tmp/npcore
-    
+
   - action: move_path
     src: ./tmp/npcore/server.cfg
     dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/npcore/resources.cfg
+    dest: ./resources.cfg
 
   - action: move_path
     src: ./tmp/npcore/NPCore.png
