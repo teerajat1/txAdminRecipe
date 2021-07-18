@@ -40,18 +40,18 @@ tasks:
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
-    ref: master
+    ref: main
     src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
-    ref: master
+    ref: main
     src: https://github.com/npcore-framework/connectqueue
 
   - action: download_github
     dest: ./resources/[standalone]/pma-voice
-    ref: master
-    src: https://github.com/npcore-framework/pma-voice
+    ref: main
+    src: https://github.com/AvarianKnight/pma-voice
 
   # NPC Directory
 
