@@ -5,7 +5,6 @@ description: Complete NoPixel Inspired RP Server For FiveM!
 
 tasks:
   # Server CFG & Brand
-
   - action: download_github
     src: https://github.com/npcore-framework/txAdminRecipe
     ref: main
@@ -24,11 +23,16 @@ tasks:
     dest: ./NPCore.png
 
   # FiveM Resources
-
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[fivem]
+
+  # Maps (MLO's)
+  - action: download_github
+    dest: ./resources/[assets]/npc-maps
+    ref: main
+    src: https://github.com/npcore-framework/npc-maps
 
   # Standalone
   - action: ensure_dir
@@ -73,12 +77,10 @@ tasks:
     src: https://github.com/AvarianKnight/pma-voice
 
   # NPC Directory
-
   - action: ensure_dir
     path: ./resources/[npc]
 
   # NPC Github Scripts
-
   - action: download_github
     dest: ./resources/[npc]/npc-scripts
     ref: main
